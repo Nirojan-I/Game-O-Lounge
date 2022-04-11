@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="memoryGame.css">
+  <link rel="shortcut icon" href="icon.ico">
+</head>
+<body>
+<div class="header">
+<img src="logo.png" alt="logo" class="logo" >
+</div>
+<div class="bodyImg"><br>
+<div >
+<button id="rules-btn" class="button black round hover-black" style="color:white;display:inline-block;margin-left:90px;margin-top:-20px;">Rules</button>
+<div id="rules" class="rules">
+      <h2>How To Play:</h2>
+      <p>
+        Start the game by clicking the Start button, then flip a card. Then try to find another card that has the same image as the first. 
+		If you can't find a pair, the flipped cards will be flipped back with the face down. 
+		Try to remember these images as it becomes easier to find pairs the longer you play.
+      </p>
+      <p>
+		 When you find a pair they are removed from the board.
+		 When you find all the pairs in this memory, you have completed the level.
+	  </p>
+	  <p>
+		Use the Restart button to suffle the cards or to restart the game.
+		Your score is calculated acording to the number of moves you played to finish the game.
+	  </p>
+      <button id="close-btn" class="button black round hover-black">Close</button>
+    </div>
+<h1  style="color:#ff4d4d;display:inline-block;margin-left:380px">Memory Game</h1>
+<h2  style="color:#ff4d4d;display:inline-block;margin-left:300px">Number of moves:<input id="moves" name="moves" class="moves" value="0"></h2>
+</div>
+  <div class="memory-game">
+  
+  <div class="memory-card" data-framework="react">
+    <img class="front-face" src="MG1.jpg" alt="React">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="react">
+    <img class="front-face" src="MG1.jpg" alt="React">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="angular">
+    <img class="front-face" src="MG2.jpg" alt="Angular">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="angular">
+    <img class="front-face" src="MG2.jpg" alt="Angular">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="ember">
+    <img class="front-face" src="MG3.jpg" alt="Ember">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="ember">
+    <img class="front-face" src="MG3.jpg" alt="Ember">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+   <div class="modal" id="id1">
+   <span onclick="document.getElementById('id1').style.display='none'" class="close" title="Close">&times;</span>
+   </div>
+  <div class="memory-card" data-framework="vue">
+    <img class="front-face" src="MG4.jpg" alt="Vue">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="vue">
+    <img class="front-face" src="MG4.jpg" alt="Vue">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="backbone">
+    <img class="front-face" src="MG5.png" alt="Backbone">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="backbone">
+    <img class="front-face" src="MG5.png" alt="Backbone">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="aurelia">
+    <img class="front-face" src="MG6.png" alt="Aurelia">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+  <div class="memory-card" data-framework="aurelia">
+    <img class="front-face" src="MG6.png" alt="Aurelia">
+    <img class="back-face" src="fp.jpg" alt="Memory Card">
+  </div>
+
+</div>
+<br>
+<button  id="start" class="button black round hover-black" style="color:white;display:inline-block;margin-left:470px">Start</button>
+<button  onclick="document.location.href='Scoresheet.php?game=Memory Game'" id="exit" class="button black round hover-black" style="color:white;display:inline-block;margin-left:70px">End</button>
+<button  id="restart" class="button black round hover-black" style="color:white;display:inline-block;margin-left:60px">Restart</button>
+</div>
+<script src="memoryGame.js"></script>
+
+</body>
+</html>

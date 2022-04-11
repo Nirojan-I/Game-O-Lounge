@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="Space Invaders.css">
+</head>
+<body>
+    <!-- header -->
+    <div class="topnav">
+        <a href="Homepage.html"><img class="logo" src="logo.png"></a>
+        <span style="float: right; margin-top: 20px; margin-right: 30px;"><form action="Scoresheet.php" method="get">
+            <input type="hidden" id="score" name="score">
+			<input type="hidden" id="game" name="game" value="Space Invaders">
+            <input type="submit" value="End Game" class="button">
+        </form></span>
+    </div>
+	<button id="rules-btn" class="btn black round hover-black" style="color:white;display:inline-block;margin-left:40px;margin-top:10px;">Rules</button>
+<div id="rules" class="rules">
+      <h2>How To Play:</h2>
+      <p>
+        Use the arrow-left and arrow-right keys to move the shooter. Press the arrow-up key to shoot. You will win if you manage to destroy all the alien invaders. You will lose if an invader hits the shooter or if the invaders reach the bottom of the grid.
+      </p>
+      
+      <button id="close-btn" class="btn black round hover-black">Close</button>
+    </div>
+	<br>
+    <h1 class="results"></h1>
+    <div style="margin-top: 10%; margin-bottom: 10%;"></div>
+    <div class="grid"></div>
+    <script src="Space Invaders.js"></script>
+</body>
+</html>

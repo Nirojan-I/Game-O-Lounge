@@ -1,0 +1,154 @@
+
+/* defines the styling of the grid */
+.grid 
+{
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: solid white 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* defines the styling of the small squares in the grid */
+.grid div 
+{
+    width: 20px;
+    height: 20px;
+}
+
+.invader
+{
+    background-color: purple;
+    border-radius: 10px;
+}
+
+.shooter
+{
+    background-color: blue;
+}
+
+.laser
+{
+    background-color: orange;
+}
+
+.boom
+{
+    background-color: red;
+}
+
+h1 
+{
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+}
+
+/* background stying */ 
+body {
+    background-image: url("body.png");
+    margin: 0px;
+  }
+  
+  .topnav {
+    background-color: #312F2F;
+    overflow: hidden;
+  }
+  
+.logo {
+height:51px;
+width:184px;
+margin-left:15px;
+margin-top:5px;
+  }
+
+.button {
+  width: 150px;
+  padding: 8px;
+  margin-right: 20px;
+  margin-top:-8px;
+  text-align: center;
+  font-size: 13pt;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: #999;
+}
+
+
+.button:hover {background-color: #231019}
+
+.button:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.btn
+{
+	border:none;
+	display:inline-block;
+	padding:10px 25px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	font:normal 15px sans-serif;
+}
+.black, .hover-black:hover
+{
+	color:white;
+	background-color:red;
+	
+}
+.hover-black:hover
+{
+	background-color:#231019;
+}
+.round
+{
+	border-radius:16px;
+}
+
+.rules {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  background: maroon;
+  color: white;
+  height: 575px;
+  width: 300px;
+  padding: 10px;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(11px);
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}

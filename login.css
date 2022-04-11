@@ -1,0 +1,361 @@
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+.switch {
+  position: absolute;
+  top:25px;
+  right:25px;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+   box-shadow: 0 0 10px black;
+}
+
+.slider:before {
+  position: absolute;
+  content: "Sign Up";
+  font:bold 15px sans-serif;
+  text-align:center;
+  padding:5px;
+  color:white;
+  height: 20px;
+  width: 80px;
+  background-color: red;
+  -webkit-transition: .4s;
+  transition: .4s;
+   box-shadow: 0 0 10px green;
+}
+
+input:checked + .slider {
+  background-color:white;
+ 
+  
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 10px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(60px);
+  content:"Log In";
+  color:white;
+  font:bold 15px sans-serif;
+  text-align:center;
+   box-shadow: 0 0 10px blue;
+}
+
+
+.slider.round {
+  border-radius: 36px;
+}
+
+.slider.round:before {
+  border-radius: 36px;
+}
+.round
+{
+	border-radius:16px;
+}
+.button
+{
+	border:none;
+	margin-right:0px;
+	display:inline-block;
+	padding:10px 25px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	font:normal 15px sans-serif;
+}
+.black, .hover-black:hover
+{
+	color:white;
+	background-color:red;
+	
+}
+.hover-black:hover
+{
+	background-color:black;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color:white;
+}
+
+.fa-eye-slash{
+	cursor:pointer;
+	content:"\f06e";
+}
+.fa-eye{
+	cursor:pointer;
+	content:"\f070";
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  content:"\f09a";
+}
+
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  content:"\f1a0";
+}
+
+.btn{
+	border:none;
+	margin-right:0px;
+	display:inline-block;
+	padding:15px 50px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color:red;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	font:normal 15px sans-serif;
+}
+.silver, .hover-silver:hover
+{
+	color:white;
+	background-color:red;
+	
+}
+.hover-silver:hover
+{
+	background-color:silver;
+	color:black;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0px;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:rgb(0,0,0,0.2); /* Fallback color */
+  text-align:center;
+  font:sans-serif;
+  color:white;
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background:url('fp.jpg') repeat-x 17px 0px;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 25%;  /* Could be more or less, depending on screen size */
+  height:60%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+div.header{
+width:100%;
+height:10%;
+background:#333333;
+}
+.logo{
+max-height:80%;
+max-width:100%;
+margin-left:15px;
+margin-top:5px;
+}
+div.bodyImg{
+height:88%;
+width:100%;
+background:url('body.png') no-repeat;
+}
+div.body{
+display:inline-block;
+width:400px;
+height:400px;
+position:relative;
+top:100px;
+left:470px;
+}
+
+.user{
+
+	color:white;
+	width:300px;
+	background:transparent;
+	border:none;
+	line-height:2em;
+	border-bottom:2px solid brown;
+}
+.password{
+	position:relative;
+	right:-32px;
+	color:white;
+	width:300px;
+	background:transparent;
+	border:none;
+	line-height:2em;
+	border-bottom:2px solid brown;
+}
+.fp{
+color:white;
+margin-right:-200px;
+font:13px sans-serif;
+cursor:pointer;
+}
+.button_p {
+  background-color: #48150F; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.buttonA {
+  padding: 12px 20px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.buttonA:hover {background-color: #231019}
+
+.buttonA:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.button1:hover {
+border-radius: 12px;
+  background-color: #555555;
+  color: white;
+}
+
+.lbl{
+  padding: 5px 10px;
+  font-size: 15px;
+  width:150px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #5D3E37;
+  border: none;
+  border-radius: 15px;
+  
+  
+}
+
+.file::-webkit-file-upload-button{
+	visibility:hidden;
+}
+.file::before{
+	content:'Profile pic';
+	-webkit-user-select:none;
+}

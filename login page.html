@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Login Page</title>
+<link rel="shortcut icon" href="icon.ico"/>
+<link rel="stylesheet" type="text/css" href="login.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<script src="login.js"></script>
+</head>
+<body>
+<div class="header">
+<img src="logo.png" alt="logo" class="logo">
+<label class="switch">
+  <input name="toggle" onchange="toggle()" type="checkbox">
+  <span class="slider round"></span>
+</label>
+</div>
+<div class="bodyImg">
+<div class="body">
+
+<form  name="myForm" align="center" action="login.php" method="post" >
+<input type="text" name="username" placeholder="Email or username" class="user" required>
+<br><br>
+<input name="password" id="id_password" type="password" placeholder="Password" class="password" required>
+<i style="position:relative;right:15px;" id="togglePassword" class="fa fa-eye-slash"></i>
+<br>
+<span onclick="document.getElementById('id01').style.display='block'" class="fp">Forgot Password?</span>
+<br><br><br>
+<button type="submit" class="button black round hover-black">Log In</button>
+<button type="reset" name="cancel" class="button black round hover-black">Cancel</button><br><br>
+<p align="center" style="color:white;font:15px sans-serif">OR</p><br><br>
+<a href="" ><i class="fa fa-facebook"></i></a>       
+<a href=""><i class="fa fa-google"></i></a>
+</div>
+</form>
+<div id="id01" class="modal">
+<form class="modal-content animate" action="email.php" method="post">
+<div class="imgcontainer">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+</div>
+<div class="container">    
+<div class="container">
+<i class="fa fa-lock fa-4x" style="margin-right:15px"></i>
+<h2>Forgot Password?</h2>             
+<div >
+<form action="email.php" id="forgot_password" role="form" autocomplete="off" class="form" method="post">
+<input id="email" name="email" placeholder="Email address" type="email" style="color:white;width:250px;background:transparent;border:none;line-height:2em;border-bottom:2px solid maroon" required>
+<br><br>
+<div class="form-group">
+<input name="recover-submit" class="btn silver round hover-silver" value="Reset Password" type="submit" >
+</div>
+<!--<input type="hidden" class="hide" name="token" id="token" value=""> -->
+</form>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+ <script>
+    const togglePassword = document.querySelector('#togglePassword');
+	const password = document.querySelector('#id_password');
+	
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+	this.classList.toggle('fa-eye');
+    const type = password.getAttribute('type') == 'text' ? 'password' : 'text';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+</script>
+</body>
+</html>

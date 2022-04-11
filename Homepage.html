@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="shortcut icon" href="icon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <link rel="stylesheet" href="Home Page.css">
+
+</head>
+<body>
+    <!-- header -->
+    <div class="topnav">
+        <a href="Homepage.html"><img class="logo" src="logo.png"></a>
+        <div style="float: right;">
+            
+			<a href="profile page.php"><img src="setting.png" style="max-height:80px;max-width:80px;margin-top:1px"></a>
+        </div>
+    </div>
+    <br/><br/>
+
+    <!-- slideshow -->
+    <div class="slideshow-container">
+
+        <div class="slides fade">
+          <a href="2D breakout game.html"><img class="center" src="break-out-game.png" style="width: 39.6%;"></a><br/><br/><br/>
+          <div class="text">BREAKOUT GAME</div>
+        </div>
+        
+        <div class="slides fade">
+          <a href="memoryGame.html"><img class="center" src="memory-games-children-1-1.png" style="width: 39.9%;"></a><br/><br/><br/>
+          <div class="text">MEMORY GAME</div>
+        </div>
+        
+        <div class="slides fade">
+          <a href="Space Invaders.html"><img class="center" src="space invaders.png" style="width: 40%;"></a><br/><br/><br/>
+          <div class="text">SPACE INVADERS</div>
+        </div>
+        
+        <a class="prev" onclick="moveSlide(-1)">❮</a>
+        <a class="next" onclick="moveSlide(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="slideCurrent(1)"></span> 
+          <span class="dot" onclick="slideCurrent(2)"></span> 
+          <span class="dot" onclick="slideCurrent(3)"></span> 
+        </div>
+      
+        <script>
+          let slideIndex = 1;
+          // calling the function
+          showSlides(slideIndex);
+          
+          // function definition to move the slides
+          function moveSlide(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          // function definition to display the current slide
+          function slideCurrent(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          // function definition to display the slides
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+</body>
+</html>
